@@ -3,7 +3,7 @@ from groq import Groq
 
 # 初始化 Groq 客戶端
 client = Groq()
-# 使用 Groq API 使用 Llama 的 LLM 
+# 使用 Groq API 使用 OpenAI GPT-OSS 的 LLM 
 def call_llama_model(messages):
     try:
         completion = client.chat.completions.create(
@@ -21,7 +21,7 @@ def call_llama_model(messages):
 
 # Streamlit App
 st.title("整合Streamlit與Groq API")
-st.write("這是一個基於Groq API和Llama模型的聊天介面。")
+st.write("這是一個基於Groq API和OpenAI GPT-OSS模型的聊天介面。")
 # 按鈕：建立新聊天
 if st.button("新聊天"):
     st.session_state.messages = []  # 清空聊天記錄
